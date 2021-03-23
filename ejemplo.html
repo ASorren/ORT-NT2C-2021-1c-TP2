@@ -6,10 +6,36 @@
             console.log("Hola!")
 
             let nombres = ['Adriana', 'Benito', 'Claudia', 'Daniel', 'Estefania', 'Fernando','Gabriela','Hugo']
+           
             nombres.forEach(function(nombre) {
                 console.log(nombre)
             }
             )
+
+            const arrayObjetos = laFuncion(nombres);
+                
+                // Esta funcion debe devolver un array de objetos, por lo tanto se debe crear el array
+                // y tambien el objeto a devolver que se va a meter dentro de array
+                // se debe recorrer el array de Strings pasado por parametro, dentro de la recorrida
+                // se debe crear el objeto de manera literal para luego ser pusheado en el array que se devuelve.
+            function laFuncion(array){
+              const arrayObj = [];
+
+                array.forEach(function(nombre){
+                  
+                    const obj = {
+                        nombre: nombre,
+                        longitud: nombre.length,
+                    }
+                    arrayObj.push(obj);
+
+              })
+              return arrayObj;
+            }
+
+           console.log(arrayObjetos);
+           console.log(JSON.stringify(arrayObjetos));
+
 
         </script>
     </body>
